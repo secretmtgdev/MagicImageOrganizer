@@ -1,0 +1,11 @@
+{
+    "scryfall": {
+        "baseUrl": "https://api.scryfall.com",
+        "api": {
+            "sets": {
+                "all": "/sets",
+                "bySet": "/cards/search?"
+            }
+        }
+    }
+}

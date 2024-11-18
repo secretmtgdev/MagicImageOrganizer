@@ -1,0 +1,20 @@
+.photo-gallery {
+    --grid-column-count: 4;
+    --grid-layout-gap: 25px;
+    --image-width: 411px;
+    --image-height: 561px;
+
+    --gap-count: calc(var(--grid-column-count) - 1);
+    --total-gap-width: calc(var(--gap-count) * var(--grid-layout-gap));
+    --grid-image-max-width: calc((100% - var(--total-gap-width)) / var(--grid-column-count))
+    
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(max(var(--image-width), var(--grid-image-max-width)), 1fr));
+    grid-gap: var(--grid-layout-gap);
+}
+
+/* Image sizes taken from poker cards in px/2 */
+.card-image {
+    width: var(--image-width);
+    height: var(--image-height);
+}
